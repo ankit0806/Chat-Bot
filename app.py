@@ -6,10 +6,10 @@ from flask import Flask, render_template, request, jsonify
 from keras.models import load_model
 
 # chat initialization
-model = load_model("chatbot_model.h5")
-intents = json.loads(open("intents.json").read())
-words = pickle.load(open("words.pkl", "rb"))
-classes = pickle.load(open("classes.pkl", "rb"))
+#model = load_model("chatbot_model.h5")
+#intents = json.loads(open("intents.json").read())
+#words = pickle.load(open("words.pkl", "rb"))
+#classes = pickle.load(open("classes.pkl", "rb"))
 
 app = Flask(__name__)
 CORS(app)
@@ -26,10 +26,10 @@ import json
 
 lemmatizer = WordNetLemmatizer()
 # chat initialization
-# model = load_model("chatbot_model.h5")
-# intents = json.loads(open("intents.json").read())
-# words = pickle.load(open("words.pkl", "rb"))
-# classes = pickle.load(open("classes.pkl", "rb"))
+model = load_model("chatbot_model.h5")
+intents = json.loads(open("intents.json").read())
+words = pickle.load(open("words.pkl", "rb"))
+classes = pickle.load(open("classes.pkl", "rb"))
 
 
 # chat functionalities
